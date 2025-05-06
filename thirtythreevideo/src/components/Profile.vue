@@ -1,10 +1,22 @@
 <template>
-        <h1>Profile Pages</h1>
+        <h1>{{ProfileName}} Profile Pages</h1>
 </template>
 
 <script>
+import {useRoute} from 'vue-router'
 export default {
-    name: 'ProfileComponent'
+    name: 'ProfileComponent',
+    data(){
+        return{
+            ProfileName:''
+
+        }
+    },
+    mounted(){
+        const route = useRoute()
+        const name = route.params.name
+        console.log(name)
+    }
 }
 </script>
 
