@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeComponent from './components/Home.vue'
 import LoginComponent from './components/Login.vue'
 import ProfileComponent from './components/Profile.vue'
+import PageNotFound from './components/PageNotFound.vue'
 
 const routes = [
     { name:'Home',
@@ -15,6 +16,10 @@ const routes = [
      { name:'ProfileComponent',
         path:'/profile/:name',
         component:ProfileComponent,
+     },
+     { name:'PageNotFound',
+        path:'/:pathMatch(.*)*',
+        component:PageNotFound,
      }
 ]
 
